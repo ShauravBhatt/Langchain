@@ -19,6 +19,7 @@ transformers
 huggingface-hub
 torch
 sentence-transformers
+langchain_groq
 
 # Environment Variable Management
 python-dotenv
@@ -26,3 +27,10 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
+
+# UI Utilities
+streamlit
+
+#Validation
+pydantic
+email-validator
