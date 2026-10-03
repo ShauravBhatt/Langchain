@@ -1,6 +1,8 @@
 # LangChain Core
 langchain
 langchain-core
+langchain_classic
+langchain_community
 
 # OpenAI Integration
 langchain-openai
@@ -31,6 +33,12 @@ scikit-learn
 # UI Utilities
 streamlit
 
-#Validation
+# Validation
 pydantic
 email-validator
+
+# Visualisation
+grandalf
+
+# pdf
+pypdf
