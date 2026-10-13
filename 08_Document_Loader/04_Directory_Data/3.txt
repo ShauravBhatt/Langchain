@@ -1,0 +1,263 @@
+DATA SCIENCE NOTES
+Topic: Exploratory Data Analysis (EDA)
+
+============================================================
+PAGE 1 — INTRODUCTION TO EDA
+============================================================
+
+1. What is Exploratory Data Analysis?
+
+Exploratory Data Analysis (EDA) is the process of examining, cleaning, summarizing, and visualizing a dataset before building a machine learning or statistical model.
+
+The main purpose of EDA is to understand what the data contains and identify patterns, problems, and unusual observations.
+
+EDA helps answer questions such as:
+
+- What variables are present?
+- What type of data does each variable contain?
+- Are values missing?
+- Are there duplicate records?
+- What is the distribution of important variables?
+- Are there unusual or extreme values?
+- Which variables appear to be related?
+
+2. Understanding the Dataset
+
+The first step is to understand the structure of the dataset.
+
+Important information includes:
+
+- Number of rows
+- Number of columns
+- Column names
+- Data types
+- Unique values
+- Basic statistical summaries
+
+For example, a dataset about students might contain:
+
+Age
+Study Hours
+Attendance
+Previous Score
+Final Score
+
+Here, Age and Study Hours are numerical variables, while another column such as Department could be categorical.
+
+3. Numerical and Categorical Data
+
+Numerical data represents measurable quantities.
+
+Examples:
+- Age
+- Salary
+- Height
+- Temperature
+- Exam score
+
+Categorical data represents groups or labels.
+
+Examples:
+- Gender
+- City
+- Product category
+- Department
+- Customer type
+
+The type of variable affects which analysis and visualization techniques are appropriate.
+
+4. Summary Statistics
+
+Summary statistics provide a quick numerical description of data.
+
+Common statistics include:
+
+- Mean
+- Median
+- Minimum
+- Maximum
+- Standard deviation
+- Quartiles
+
+The mean represents the arithmetic average.
+
+The median is the middle value after sorting the observations.
+
+The median is often more robust to extreme values than the mean.
+
+5. Why EDA Comes Before Modeling
+
+Building a model without understanding the data can produce misleading results.
+
+For example, a model may appear accurate because of data leakage, duplicated records, an unusual class distribution, or an incorrectly encoded variable.
+
+EDA therefore acts as an initial quality and understanding check.
+
+============================================================
+PAGE 2 — DATA QUALITY AND DISTRIBUTIONS
+============================================================
+
+6. Missing Values
+
+Missing values occur when information is unavailable for some observations.
+
+Common causes include:
+
+- Data collection errors
+- Optional survey responses
+- Failed measurements
+- Incomplete database records
+- Merging datasets with different information
+
+Missing values should be investigated before deciding how to handle them.
+
+Possible approaches include:
+
+- Removing observations
+- Removing a problematic feature
+- Filling values using statistical methods
+- Using domain-specific replacement rules
+- Using models designed to handle missing values
+
+There is no universal solution. The appropriate method depends on why the data is missing and how much information is missing.
+
+7. Duplicate Records
+
+Duplicate rows can occur when data is collected or merged incorrectly.
+
+Duplicates may cause some observations to receive more importance than intended.
+
+Before removing duplicates, determine whether repeated records are actually errors. In some datasets, multiple rows for the same entity can be legitimate.
+
+8. Outliers
+
+An outlier is an observation that is unusually far from the rest of the data.
+
+For example, if most salaries in a dataset range from 20,000 to 100,000 but one value is 10,000,000, that observation deserves investigation.
+
+Outliers can be caused by:
+
+- Data entry errors
+- Measurement errors
+- Rare but valid events
+- Different populations
+- Genuine extreme behavior
+
+An outlier should not automatically be deleted.
+
+9. Distribution of Data
+
+A distribution describes how values are spread across a variable.
+
+Important characteristics include:
+
+- Center
+- Spread
+- Skewness
+- Presence of multiple groups
+- Extreme values
+
+Histograms are commonly used to visualize numerical distributions.
+
+A symmetric distribution has similar behavior on both sides of its center.
+
+A right-skewed distribution has a longer tail toward larger values.
+
+A left-skewed distribution has a longer tail toward smaller values.
+
+10. Visualization in EDA
+
+Visualization makes patterns easier to identify.
+
+Common plots include:
+
+- Histogram — distribution of a numerical variable
+- Box plot — spread and potential outliers
+- Scatter plot — relationship between two numerical variables
+- Bar chart — comparison of categories
+- Line plot — trends over an ordered variable such as time
+
+The purpose of visualization is not decoration. It is to reveal structure that may not be obvious from summary statistics alone.
+
+============================================================
+PAGE 3 — RELATIONSHIPS AND PRACTICAL WORKFLOW
+============================================================
+
+11. Correlation
+
+Correlation measures the strength and direction of a linear relationship between two numerical variables.
+
+A positive correlation means that higher values of one variable tend to be associated with higher values of another.
+
+A negative correlation means that higher values of one variable tend to be associated with lower values of another.
+
+A correlation close to zero indicates little linear association.
+
+Correlation does not automatically imply causation.
+
+For example, two variables can be correlated because they are both influenced by another variable.
+
+12. Feature Relationships
+
+EDA can reveal relationships that may be useful for later modeling.
+
+Examples:
+
+- Study hours may be related to exam score.
+- House size may be related to house price.
+- Advertising expenditure may be related to sales.
+
+Scatter plots are especially useful for examining numerical relationships.
+
+When many numerical variables are present, a correlation matrix can provide a compact overview of pairwise linear relationships.
+
+13. Class Distribution
+
+For classification problems, it is important to examine how many observations belong to each class.
+
+For example:
+
+Class A: 900 samples
+Class B: 100 samples
+
+This is an imbalanced dataset.
+
+If a model predicts Class A for almost every observation, it may achieve high accuracy while performing poorly on Class B.
+
+Therefore, class distribution should be examined before selecting evaluation metrics and modeling strategies.
+
+14. Practical EDA Workflow
+
+A simple EDA workflow can be:
+
+1. Load the dataset.
+2. Understand its shape and columns.
+3. Inspect data types.
+4. Check missing values.
+5. Check duplicate records.
+6. Calculate summary statistics.
+7. Examine distributions.
+8. Investigate outliers.
+9. Analyze relationships between important variables.
+10. Check the target variable and class balance.
+11. Record important findings.
+12. Prepare the data for modeling.
+
+15. Final Takeaway
+
+EDA is the bridge between raw data and meaningful modeling.
+
+A strong EDA process helps you understand:
+
+- What the data represents
+- Whether the data is reliable
+- What problems exist
+- Which patterns may be important
+- Which preprocessing steps may be required
+- Which modeling approaches may be appropriate
+
+The key principle is simple:
+
+Understand the data first, then build the model.
+
+A machine learning model can only be as reliable as the data and assumptions behind it.
